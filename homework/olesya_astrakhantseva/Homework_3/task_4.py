@@ -9,5 +9,3 @@ hypotenuse = math.sqrt(leg_one**2 + leg_two**2)
 square = 0.5 * leg_one * leg_two
 
 print(f'Гипотенуза треугольника равна: {hypotenuse}, его площадь равна: {square}')
-
-
