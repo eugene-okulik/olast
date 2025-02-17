@@ -12,4 +12,3 @@ def result(stroki):
 
 
 result(stroki)
-
