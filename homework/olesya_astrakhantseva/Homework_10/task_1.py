@@ -15,5 +15,6 @@ def greeting():
 def say_hi():
     print('Hi')
 
+
 greeting()
 say_hi()
