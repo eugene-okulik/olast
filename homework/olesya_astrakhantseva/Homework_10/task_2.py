@@ -15,6 +15,7 @@ text_me('text_in_func', count=5)
 
 # Второй вариант
 
+
 def repeat(count):
     def decorator(func):
         def wrapper(*args, **kwargs):
