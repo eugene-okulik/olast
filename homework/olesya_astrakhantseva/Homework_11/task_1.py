@@ -32,7 +32,8 @@ for book in all_books:
 
 class SchoolBook(Book):
 
-    def __init__(self, subject, school_class, book_title, author, number_of_pages, ISBN, reserved=False, availability_of_tasks=False):
+    def __init__(self, subject, school_class, book_title, author,
+                 number_of_pages, ISBN, reserved=False, availability_of_tasks=False):
         super().__init__(book_title, author, number_of_pages, ISBN, reserved)
         self.subject = subject
         self.school_class = school_class
