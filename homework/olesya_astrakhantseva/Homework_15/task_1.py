@@ -42,9 +42,9 @@ INSERT INTO books (title, taken_by_student_id)
 VALUES (%s, %s)
 """
 values_books = [
-        ('QA Pycharm', student_id),
-        ('QA SQL', student_id),
-        ('QA BD', student_id)
+    ('QA Pycharm', student_id),
+    ('QA SQL', student_id),
+    ('QA BD', student_id)
 ]
 
 books_created = []
