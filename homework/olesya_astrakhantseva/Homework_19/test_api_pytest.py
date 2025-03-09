@@ -39,11 +39,7 @@ def test_create_object(create_post):
         allure.dynamic.suite('Создание объекта')
 
 
-@allure.feature('Objects')
 @allure.title('Изменение объекта методом PUT')
-@allure.severity(allure.severity_level.NORMAL)
-@allure.suite('Изменение объекта')
-@allure.story('Изменение объекта')
 @pytest.mark.medium
 @pytest.mark.parametrize("create_post", [
     {"name": "qa_initial", "data": {"cat": "dusa"}}
@@ -82,11 +78,7 @@ def test_change_put(create_post):
         allure.dynamic.suite('Изменение объекта')
 
 
-@allure.feature('Objects')
 @allure.title('Изменение объекта методом PATCH')
-@allure.severity(allure.severity_level.NORMAL)
-@allure.suite('Изменение объекта')
-@allure.story('Изменение объекта')
 @pytest.mark.medium
 @pytest.mark.parametrize("create_post", [
     {"name": "qa_initial", "data": {"cat": "dusa"}}
@@ -117,11 +109,7 @@ def test_change_patch(create_post):
         allure.dynamic.suite('Изменение объекта')
 
 
-@allure.feature('Objects')
 @allure.title('Удаление объекта')
-@allure.severity(allure.severity_level.CRITICAL)
-@allure.suite('Удаление объекта')
-@allure.story('Удаление объекта')
 @pytest.mark.critical
 @pytest.mark.parametrize("create_post", [
     {"name": "qa_delete", "data": {"cat": "delete_me"}}
