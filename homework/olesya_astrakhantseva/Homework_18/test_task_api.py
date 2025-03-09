@@ -5,6 +5,7 @@ import allure
 base_url = 'http://167.172.172.115:52353/object'
 headers = {'Content-Type': 'application/json'}
 
+
 # Функция для создания объекта
 def create_object():
     body = {
@@ -63,7 +64,6 @@ def test_create_object():
 @allure.severity(allure.severity_level.NORMAL)
 @allure.suite('Изменение объекта')
 @allure.story('Изменение объекта')
-
 def test_change_put():
     # Создание объекта
     post_id = create_object()

@@ -4,12 +4,14 @@ import requests
 from test_api_pytest import base_url
 from test_api_pytest import headers
 
+
 # Фикстура для глобальных сообщений
 @pytest.fixture(scope='session', autouse=True)
 def print_info():
     print('\nStart testing')
     yield
     print('\nTesting completed')
+
 
 # Фикстура для создания и удаления объекта через yield
 @pytest.fixture
@@ -26,6 +28,7 @@ def create_post(request):
     yield created_object
 
     requests.delete(f'{base_url}/{post_id}')
+
 
 # Фикстура для логирования перед и после теста
 @pytest.fixture(autouse=True)

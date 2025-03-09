@@ -14,7 +14,6 @@ headers = {'Content-Type': 'application/json'}
     {"name": "qa2", "data": {"cat": "vasa"}},
     {"name": "qa3", "data": {"cat": "petya"}},
 ], indirect=True, ids=["qa1", "qa2", "qa3"])
-
 def test_create_object(create_post):
     post_id = create_post["id"]
     name = create_post["name"]
