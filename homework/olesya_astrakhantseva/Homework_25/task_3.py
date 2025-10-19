@@ -31,6 +31,7 @@ def test_choose_language(driver):
     assert "Python" in expected_text
     print(expected_text)
 
+
 def test_hello(driver):
     driver.get("https://the-internet.herokuapp.com/dynamic_loading/2")
     start_button = driver.find_element(By.XPATH, "//button[text()='Start']")
