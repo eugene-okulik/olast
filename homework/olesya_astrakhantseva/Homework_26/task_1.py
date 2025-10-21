@@ -25,9 +25,8 @@ def shop(driver):
 
 
 def test_open_in_new_tab(driver, shop):
-    ## Открытие товара в новой вкладке
+    # Открытие товара в новой вкладке
     driver.implicitly_wait(2)
-    wait = WebDriverWait(driver, 10)
 
     link = driver.find_element(By.XPATH, "//*[text()='Customizable Desk']")
     print(driver.window_handles)
@@ -35,11 +34,11 @@ def test_open_in_new_tab(driver, shop):
     tabs = driver.window_handles
     driver.switch_to.window(tabs[1])
 
-    ## Добавление товара в корзину
+    # Добавление товара в корзину
     button_add = driver.find_element(By.XPATH, "//*[@id='add_to_cart']")
     button_add.click()
 
-    ## Нажатие на кнопку продолжения покупок
+    # Нажатие на кнопку продолжения покупок
     button_continue = wait.until(
         ec.element_to_be_clickable(
             (By.XPATH, "//*[text()='Continue Shopping']")
@@ -48,7 +47,7 @@ def test_open_in_new_tab(driver, shop):
     button_continue.click()
     sleep(2)
 
-    ## Закрытие вкладки с товаром и переключение на первую вкладку
+    # Закрытие вкладки с товаром и переключение на первую вкладку
     driver.close()
     driver.switch_to.window(tabs[0])
 
